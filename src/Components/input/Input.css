@@ -1,0 +1,14 @@
+.input-container {
+    width: 50%;
+    margin-right: 25px;
+}
+
+.input {
+    resize: none;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    background-color: #30363D;
+    border-radius: 5px;
+}
+
