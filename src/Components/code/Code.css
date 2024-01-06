@@ -1,0 +1,28 @@
+.code * {
+    margin: 0 !important;
+}
+
+.code {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.code pre {
+    padding: 10px !important;
+    padding-top: 35px !important;
+    background-color: #161B22 !important;
+}
+
+.code pre * {
+    background-color: #161B22 !important;
+}
+
+.icon {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background-color: transparent;
+    font-size: 15px;
+    z-index: 5;
+}
