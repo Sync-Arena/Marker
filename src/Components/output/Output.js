@@ -41,6 +41,15 @@ const Output = (props) => {
               <Code known={0} children={codeContent} />
             );
           },
+          table(props) {
+            return (
+              <div className="table-container">
+                <table>
+                  {props.children}
+                </table>
+              </div>
+            );
+          },
         }}
       />
     </div>
