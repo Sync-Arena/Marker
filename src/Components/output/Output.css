@@ -57,7 +57,7 @@ blockquote p {
     color: #A9A9A9; 
 }
 
-p code {
+code {
     padding: 3px 6px;
     font-size: 85%;
     background-color: #161B22;
