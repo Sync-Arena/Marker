@@ -1,6 +1,7 @@
 import React from 'react'
-import { MdOutlineContentCopy } from "react-icons/md";
+import { MdOutlineContentCopy, MdLightMode } from "react-icons/md";
 import { GrCheckmark } from "react-icons/gr";
+import { FaGithub } from "react-icons/fa";
 
 export const CopyIcon = () => (
     <MdOutlineContentCopy />
@@ -8,4 +9,12 @@ export const CopyIcon = () => (
 
 export const Copied = () => (
     <GrCheckmark />
+);
+
+export const LightMode = () => (
+    <MdLightMode />
+);
+
+export const GitHub = () => (
+    <FaGithub />
 );

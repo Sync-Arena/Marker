@@ -19,8 +19,26 @@
 }
 
 .container {
-  height: 92%;
+  height: calc(100% - 65px);
   display: flex;
-  padding: 20px;
+  padding: 40px;
   background-color: #0D1117;
+}
+
+
+::-webkit-scrollbar {
+  width: 5px ; 
+  max-height: 5px;
+}
+
+textarea::-webkit-scrollbar {
+  width: 5px ; 
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #FFA116; 
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent; 
 }
