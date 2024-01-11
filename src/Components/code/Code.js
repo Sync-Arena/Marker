@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import { materialDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
-import { CopyIcon, Copied } from '../icons';
+import { FaCheck } from "react-icons/fa6";
+import { FiCopy } from "react-icons/fi";
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import { dark } from 'react-syntax-highlighter/dist/esm/styles/prism';
+import { solarizedlight, solarizedDarkAtom} from 'react-syntax-highlighter/dist/esm/styles/prism';
 import './Code.css';
 
-const Code = (props) => {
+const Code = ({known, children, lang, isDark}) => {
   const [isCopied, setIsCopied] = useState(false);
 
   useEffect(() => {
@@ -19,22 +19,22 @@ const Code = (props) => {
 
   return (
     <div className='code'>
-      <CopyToClipboard text={props.children} onCopy={() => setIsCopied(true)}>
+      <CopyToClipboard text={children} onCopy={() => setIsCopied(true)}>
         <button className='icon'>
-          {isCopied ? <Copied /> : <CopyIcon />}
+          {isCopied ? <FaCheck /> : <FiCopy className='copy-icon'/>}
         </button>
       </CopyToClipboard>
-      {props.known === 1 
+      {known === 1 
         ? 
         <SyntaxHighlighter
-          children={String(props.children).replace(/\n$/, '')}
-          language={props.lang}
-          style={dark}
+          children={String(children).replace(/\n$/, '')}
+          language={lang}
+          style={isDark ? solarizedDarkAtom : solarizedlight}
         />
         : 
         <pre>
           <code>
-            {props.children}
+            {children}
           </code>
         </pre>
       }

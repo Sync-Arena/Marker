@@ -7,49 +7,39 @@ import remarkMath from 'remark-math';
 import 'katex/dist/katex.min.css';
 import './Output.css';
 
-const Output = (props) => {
+const Output = ({ content, isDark }) => {
   return (
     <div className='output-container'>
       <Markdown
         className='output'
         remarkPlugins={[remarkMath, remarkGfm]}
         rehypePlugins={[rehypeKatex]}
-        children={props.content}
+        children={content}
         components={{
-          pre(props) {
-            const { children } = props;
-            let codeContent;
-            let lang;
-            const hasSpecificLang = React.Children.toArray(children).some(
-              (child) => {
-                if (
-                  React.isValidElement(child) &&
-                  child.type === 'code'
-                ) {
-                  codeContent = child.props.children;
-                  lang = /language-(\w+)/.exec(child.props.className || '');
-                  if (child.props.className) {
-                    return child.props.className !== "";
-                  }
-                }
-                return false;
-              }
-            );
-            return hasSpecificLang ? (
-              <Code known={1} children={codeContent} lang={lang[1]} />
-            ) : (
-              <Code known={0} children={codeContent} />
-            );
-          },
-          table(props) {
+          pre: ({ children: codeChildren }) => {
+            const codeContent =
+              React.Children.toArray(codeChildren).find(
+                (child) =>
+                  React.isValidElement(child) && child.type === 'code'
+              )?.props.children || '';
+
+            const lang =
+              /language-(\w+)/.exec(
+                React.Children.toArray(codeChildren).find(
+                  (child) =>
+                    React.isValidElement(child) && child.type === 'code'
+                )?.props.className || ''
+              )?.[1] || '';
+
             return (
-              <div className="table-container">
-                <table>
-                  {props.children}
-                </table>
-              </div>
+              <Code known={lang ? 1 : 0} children={codeContent} lang={lang} isDark={isDark} />
             );
           },
+          table: ({ children: tableChildren }) => (
+            <div className="table-container">
+              <table>{tableChildren}</table>
+            </div>
+          ),
         }}
       />
     </div>

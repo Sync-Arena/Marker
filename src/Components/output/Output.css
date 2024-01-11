@@ -10,8 +10,8 @@
     right: 0;
     width: 30px;
     height: 30px;
-    border-top: 5px solid #FFA116;
-    border-right: 5px solid #FFA116;
+    border-top: 5px solid var(--main-color);
+    border-right: 5px solid var(--main-color);
     z-index: 5;
 }
 
@@ -22,8 +22,8 @@
     right: 0;
     width: 30px;
     height: 30px;
-    border-bottom: 5px solid #FFA116;
-    border-right: 5px solid #FFA116;
+    border-bottom: 5px solid var(--main-color);
+    border-right: 5px solid var(--main-color);
     z-index: 5;
 }
 
@@ -44,11 +44,11 @@
 hr {
     border: none;
     height: 1px;
-    background-color: #30363D; 
+    background-color: var(--hr-color); 
 }
 
 blockquote {
-    border-left: 0.25em solid #343942; 
+    border-left: 0.25em solid var(--blockqoute-color); 
     padding: 0.15em 1em; 
 }
   
@@ -57,13 +57,13 @@ blockquote p {
 }
 
 blockquote * {
-    color: #A9A9A9 !important; 
+    color: var(--secondary-font-color) !important; 
 }
 
 code {
     padding: 0.2em 0.4em;
     font-size: 85%;
-    background-color: #343942;
+    background-color: var(--heighlight-color);
     white-space: break-spaces;
     border-radius: 6px;
     margin-left: 0.5em !important;
@@ -71,7 +71,7 @@ code {
 }
 
 a {
-    color: #2581F7 !important;
+    color: var(--link-color) !important;
 }
 
 li {
@@ -90,7 +90,7 @@ table {
 }
 
 table, th, td {
-    border: 1px solid #30363D;
+    border: 1px solid var(--table-border-color);
     padding: 6px 13px;
     text-align: center;
     vertical-align: middle;
@@ -101,5 +101,5 @@ tbody tr:nth-child(odd) {
 }
   
 tbody tr:nth-child(even) {
-    background-color: #161B22;
+    background-color: var(--table-color);
 }
