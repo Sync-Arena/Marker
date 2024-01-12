@@ -5,7 +5,7 @@ import remarkGfm from 'remark-gfm';
 import rehypeKatex from 'rehype-katex';
 import remarkMath from 'remark-math';
 import 'katex/dist/katex.min.css';
-import './Output.css';
+import '../../style/Output.css';
 
 const Output = ({ content, isDark }) => {
   return (

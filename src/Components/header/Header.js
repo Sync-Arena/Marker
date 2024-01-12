@@ -2,7 +2,7 @@ import React from 'react'
 import { MdLightMode } from "react-icons/md";
 import { FaGithub } from "react-icons/fa";
 import { FaMoon } from "react-icons/fa6";
-import './Header.css'
+import '../../style/Header.css';
 
 const Header = ({isDark, setDark, setLight}) => {
   return (

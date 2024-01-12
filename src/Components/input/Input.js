@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import './Input.css';
+import '../../style/Input.css';
 
 const Input = (props) => {
 

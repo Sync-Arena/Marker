@@ -4,7 +4,7 @@ import { FaCheck } from "react-icons/fa6";
 import { FiCopy } from "react-icons/fi";
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { solarizedlight, solarizedDarkAtom} from 'react-syntax-highlighter/dist/esm/styles/prism';
-import './Code.css';
+import '../../style/Code.css';
 
 const Code = ({known, children, lang, isDark}) => {
   const [isCopied, setIsCopied] = useState(false);
