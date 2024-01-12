@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Wet+Paint&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Rubik+Wet+Paint&display=swap');
+
 :root {
   --background-color: #fff;
-  --main-color: #0969DA;
+  --main-color: #2790e9;
   --selected-background-color: #BBDFFF;
   --main-font-color: #000;
   --secondary-font-color: #656D76;
@@ -17,21 +20,21 @@
 } 
 
 [theme='dark'] {
-  --background-color: #0D1117;
-  --main-color: #1F6FEB;
-  --selected-background-color: #234879;
+  --background-color: #0F1A2C;
+  --main-color: #38BDF8;
+  --selected-background-color: #21434E;
   --main-font-color: #fff;
-  --secondary-font-color: #848D97;
-  --code-color: #161B22;
-  --blockqoute-color: #30363D;
-  --heighlight-color: #343942;
-  --table-color: #161B22;
-  --table-border-color: #30363D;
-  --hr-color: #30363D;
+  --secondary-font-color: #94A3B8;
+  --code-color: #1E293B;
+  --blockqoute-color: #475569;
+  --heighlight-color: #475569;
+  --table-color: #1E293B;
+  --table-border-color: #3A485D;
+  --hr-color: #293548;
   --link-color: #2F81F6;
   --header-icon-color: #fff;
-  --code-icon-color: #848D97;
-  --shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+  --code-icon-color: #94A3B8;
+  --shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
 }
 
 * {

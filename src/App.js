@@ -40,9 +40,9 @@ function App() {
     <div className="App">
         <Header isDark={isDark} setDark={setDark} setLight={setLight}/>
         <div className='container'>
-          <Input setContent={(e) => handleContentChange(e)}/>
-          <div className='separator' ></div>
           <Output content={inputContent} isDark={isDark}/>
+          <div className='separator' ></div>
+          <Input setContent={(e) => handleContentChange(e)}/>
         </div>
     </div>
   );

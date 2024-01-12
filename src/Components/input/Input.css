@@ -1,18 +1,17 @@
 .input-container {
     width: 50%;
     position: relative;
-    direction: rtl;
 }
 
 .input-container::before {
     content: "";
     position: absolute;
     top: 0;
-    left: 0;
+    right: 0;
     width: 30px;
     height: 30px;
     border-top: 5px solid var(--main-color);
-    border-left: 5px solid var(--main-color);
+    border-right: 5px solid var(--main-color);
     z-index: 5;
 }
 
@@ -20,16 +19,15 @@
     content: "";
     position: absolute;
     bottom: 0;
-    left: 0;
+    right: 0;
     width: 30px;
     height: 30px;
     border-bottom: 5px solid var(--main-color);
-    border-left: 5px solid var(--main-color);
+    border-right: 5px solid var(--main-color);
     z-index: 5;
 }
 
 .input {
-    direction: rtl;
     resize: none;
     width: 100%;
     height: calc(100% - 40px);

@@ -18,7 +18,7 @@ const Code = ({known, children, lang, isDark}) => {
   }, [isCopied]);
 
   return (
-    <div className='code'>
+    <div className='code'  style={{ direction: 'ltr' }}>
       <CopyToClipboard text={children} onCopy={() => setIsCopied(true)}>
         <button className='icon'>
           {isCopied ? <FaCheck /> : <FiCopy className='copy-icon'/>}

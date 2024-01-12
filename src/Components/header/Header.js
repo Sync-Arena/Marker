@@ -9,16 +9,16 @@ const Header = ({isDark, setDark, setLight}) => {
     <div className='header'>
         <div className='label'>
             <p className='marker'>MARKER</p>
-            <p className='org'>sync arena</p>
+            <p className='org'>SyncArena</p>
         </div>
         <div> 
             {isDark ? 
-              <MdLightMode className='header-icon mode-icon' onClick={setLight}/> 
+              <FaMoon className='header-icon mode-icon' onClick={setLight}/>
               : 
-              <FaMoon className='header-icon mode-icon' onClick={setDark}/>
+              <MdLightMode className='header-icon mode-icon' onClick={setDark}/> 
             }
             <a href='https://github.com/Sync-Arena/Marker' target='_blank'>
-              <FaGithub className='header-icon'/>
+              <FaGithub className='header-icon github-icon'/>
             </a>
         </div>
     </div>
