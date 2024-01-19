@@ -1,9 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
-import { FaCheck } from "react-icons/fa6";
-import { FiCopy } from "react-icons/fi";
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { solarizedlight, solarizedDarkAtom} from 'react-syntax-highlighter/dist/esm/styles/prism';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faClone, faCheck } from '@fortawesome/free-solid-svg-icons'
+import { FaCheck } from "react-icons/fa6";
+
+import 'bootstrap-icons/font/bootstrap-icons.css';
+import { FiCopy } from "react-icons/fi";
+
 import '../../style/Code.css';
 
 const Code = ({known, children, lang, isDark}) => {
@@ -21,7 +26,7 @@ const Code = ({known, children, lang, isDark}) => {
     <div className='code'  style={{ direction: 'ltr' }}>
       <CopyToClipboard text={children} onCopy={() => setIsCopied(true)}>
         <button className='icon'>
-          {isCopied ? <FaCheck /> : <FiCopy className='copy-icon'/>}
+          {isCopied ? <FaCheck /> :  < FiCopy />}
         </button>
       </CopyToClipboard>
       {known === 1 

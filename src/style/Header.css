@@ -29,7 +29,6 @@
 
 .header-icon { 
     font-size: 25px;
-    margin-left: 20px;
     cursor: pointer;
 }
 
@@ -38,5 +37,6 @@
 }
 
 .mode-icon { 
-    font-size: 22px;
+    font-size: 20px;
+    margin-right: 25px;
 }
